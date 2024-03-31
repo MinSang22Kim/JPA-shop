@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemberRepository {
 
+    // 엔티티 자동 주입
     @PersistenceContext
     private EntityManager em;
 
