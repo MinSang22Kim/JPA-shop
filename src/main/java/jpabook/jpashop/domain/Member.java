@@ -17,7 +17,7 @@ public class Member {
 
     private String name;
 
-    @Embedded
+    @Embedded //내장됨
     private Address address;
 
     @OneToMany(mappedBy = "member") // Order 클래스의 member 필드에 의해 매핑된 것

@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import jpabook.jpashop.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +19,7 @@ public class Category {
     private String name;
 
     @ManyToMany
+    // 다대다 관계는 이렇게 조인불편해, 실무에선 비추천!!!
     @JoinTable(name = "category_item",
         joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id"))
@@ -32,6 +31,4 @@ public class Category {
 
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<>();
-
-
 }

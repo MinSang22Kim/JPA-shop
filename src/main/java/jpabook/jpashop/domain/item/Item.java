@@ -1,10 +1,10 @@
 package jpabook.jpashop.domain.item;
 
-import jakarta.persistence.*;
-import jpabook.jpashop.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.*;
+import jpabook.jpashop.domain.Category;
 
 import java.util.ArrayList;
 import java.util.List;

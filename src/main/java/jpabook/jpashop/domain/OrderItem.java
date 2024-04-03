@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jpabook.jpashop.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Getter @Setter
@@ -24,7 +23,4 @@ public class OrderItem {
 
     private int orderPrice; // 주문가격
     private int count; // 주문수량
-
-
-
 }
