@@ -11,6 +11,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 @RequiredArgsConstructor
 public class MemberController {
@@ -39,5 +41,13 @@ public class MemberController {
 
         memberService.join(member);
         return "redirect:/"; // 저장 후 다시 재로딩 안되도록
+    }
+
+    @GetMapping("/members")
+    public String list(Model model) {
+        model.addAttribute("members", memberService.findMembers());
+//        List<Member> members = memberService.findMembers();
+//        model.addAttribute("members", members); // 둘 중에 편한 방법으로
+        return "members/memberList";
     }
 }
