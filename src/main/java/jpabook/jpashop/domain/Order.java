@@ -27,8 +27,6 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    // JPQL select o From order o; -> SQL select * from order 100 + 1(order)
-
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
@@ -59,11 +57,11 @@ public class Order {
     }
 
     //==생성 메서드==//
-    public static Order createOrder(Member member, Delivery delivery, OrderItem... orederitem) {
+    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
         Order order = new Order();
         order.setMember(member);
         order.setDelivery(delivery);
-        for (OrderItem orderItem : order.orderItems) {
+        for (OrderItem orderItem : orderItems) {
             order.addOrderItem(orderItem);
         }
         order.setStatus(OrderStatus.ORDER);
