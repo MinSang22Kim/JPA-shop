@@ -1,7 +1,9 @@
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -13,6 +15,7 @@ import static jakarta.persistence.FetchType.*;
 @Entity
 @Table(name = "orders") // 테이블 이름 안정하면 Order로 자동명명, order는 예약어임
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Order {
 
     @Id
