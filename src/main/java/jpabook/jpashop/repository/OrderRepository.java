@@ -1,8 +1,8 @@
 package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
+import jpabook.jpashop.domain.Order;
 import lombok.RequiredArgsConstructor;
-import org.junit.jupiter.api.Order;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
