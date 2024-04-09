@@ -23,7 +23,7 @@ public class MemberController {
     @GetMapping("/members/new")
     public String createForm(Model model) {
         model.addAttribute("memberForm", new MemberForm());
-        return "members/createMemberForm";
+        return "members/createMemberForm"; // resources/createMemberForm.html
     }
 
     // 데이터를 실제로 등록
