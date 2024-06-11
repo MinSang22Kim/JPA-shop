@@ -1,3 +1,3 @@
 ## SpringBoot & JPA
 
-🍀 About Studying SpringBoot & JPA
+🍀 About Studying SpringBoot & JPA 
